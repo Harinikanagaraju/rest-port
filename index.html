@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Away – Taste of Malaysia</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&family=Outfit:wght@300;400;500;600;700&family=Dancing+Script:wght@600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="loader-brand">Take Away</div>
+        <div
+            style="font-size:0.65rem;letter-spacing:4px;text-transform:uppercase;color:rgba(201,168,76,0.5);margin-top:8px;">
+            Taste of Malaysia</div>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-ring" id="cursorRing"></div>
+
+    <!-- BACK TO TOP -->
+    <div id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar" class="navbar navbar-expand-lg">
+        <div class="container-fluid px-4">
+            <a class="nav-brand navbar-brand" href="#hero">Take <span>Away</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+                <ul class="navbar-nav gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ourmenu">Our Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#ourchef">Our Chef</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contactus">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+ 
+<section id="hero">
+    <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide active"
+             style="background-image:url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1600&auto=format&fit=crop')"
+             data-dish-img="https://images.unsplash.com/photo-1626508035297-0d1eb1303f37?q=80&w=600&auto=format&fit=crop"
+             data-dish-name="Beef Rendang"></div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop')"
+             data-dish-img="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?q=80&w=600&auto=format&fit=crop"
+             data-dish-name="Hainanese Chicken Rice"></div>
+
+        <div class="hero-slide"
+             style="background-image:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop')"
+             data-dish-img="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=600&auto=format&fit=crop"
+             data-dish-name="Butter Chicken &amp; Naan"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-grain"></div>
+    <div class="slide-wipe" id="slideWipe"></div>
+
+    <div class="hero-lines">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+
+    <div id="sparkContainer"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Rotating seal -->
+    <div class="seal">
+        <svg viewBox="0 0 100 100">
+            <defs>
+                <path id="sealPath" d="M50,50 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/>
+            </defs>
+            <text font-size="5.4" letter-spacing="2.5" fill="var(--gold)">
+                <textPath href="#sealPath">★ MADURAI &#160;&#160;★ MALAYSIA &#160;&#160;★ SINGAPORE &#160;&#160;★ INDIA &#160;&#160;</textPath>
+            </text>
+        </svg>
+        <div class="seal-center">TA</div>
+    </div>
+
+
+
+    <!-- Slide counter / progress -->
+    <div class="slide-counter" id="slideCounter">
+        <span class="count-current" id="slideCurrent">01</span>
+        <span class="count-track"><span class="count-fill" id="countFill"></span></span>
+        <span class="count-total">03</span>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+        <p class="hero-eyebrow"><span class="deco-line"></span> Bold Flavours · True Heritage · Est. Madurai <span class="deco-line right"></span></p>
+
+        <h1 class="hero-title">
+            <span class="title-line">
+                <span class="ltr" style="animation-delay:.5s">T</span><span class="ltr" style="animation-delay:.56s">a</span><span class="ltr" style="animation-delay:.62s">k</span><span class="ltr" style="animation-delay:.68s">e</span>
+            </span>
+            <span class="title-line line2 ltr-wrap">
+                <span class="ltr" style="animation-delay:.82s">A</span><span class="ltr" style="animation-delay:.88s">w</span><span class="ltr" style="animation-delay:.94s">a</span><span class="ltr" style="animation-delay:1s">y</span>
+            </span>
+        </h1>
+
+        <p class="hero-subtitle" id="cuisineRow">
+            <span class="cuisine active" data-slide="0">Malaysia</span>
+            <span class="sep">✦</span>
+            <span class="cuisine" data-slide="1">Singapore</span>
+            <span class="sep">✦</span>
+            <span class="cuisine" data-slide="2">Indian Specials</span>
+        </p>
+
+        <div class="hero-cta">
+            <a href="#ourmenu" class="btn-gold magnet">Explore Menu</a>
+            <a href="#contactus" class="btn-outline-gold magnet">Order Now</a>
+        </div>
+    </div>
+
+    <div class="hero-stats">
+        <div class="hero-stat"><div class="num">50+</div><div class="lbl">Menu Items</div></div>
+        <div class="hero-stat"><div class="num">100%</div><div class="lbl">Halal Certified</div></div>
+        <div class="hero-stat"><div class="num">2</div><div class="lbl">Cuisines Fused</div></div>
+        <div class="hero-stat"><div class="num">Daily</div><div class="lbl">Fresh &amp; Hot</div></div>
+    </div>
+</section>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5 text-center reveal-left">
+                    <div class="about-logo-wrap" style="padding:60px 0;">
+                        <div class="about-logo-ring-2"></div>
+                        <div class="about-logo-ring"></div>
+                        <!-- Logo circle with branding -->
+                        <div class="about-logo"
+                            style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#5C0000,#8B0000);margin:auto;">
+                            <div style="text-align:center;padding:20px;">
+                                <img style="width: 300px; height: 300px; border-radius: 50%;" src="./takeaway logo.jpeg"
+                                    alt="Takeaway Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="halal-badge reveal d1">
+                        <span style="font-size:1.2rem;">حلال</span>
+                        <span>Certified Halal</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <p class="section-label reveal">Our Story</p>
+                    <h2 class="section-title reveal d1">Authentic Flavours<br><em>from the Heart</em></h2>
+                    <div class="gold-divider reveal d2"></div>
+                    <p class="reveal d2"
+                        style="color:rgba(255,245,228,0.65);line-height:1.9;font-size:1.05rem;font-family:'Cormorant Garamond',serif;">
+                        Born from a deep love of Malaysian and Singaporean street food culture, Take Away brings the
+                        authentic tastes of Kuala Lumpur and Singapore's hawker stalls right to the heart of Madurai.
+                        Every dish carries generations of tradition — bold spices, true heritage, made with love.
+                    </p>
+                    <p class="reveal d3"
+                        style="color:rgba(255,245,228,0.55);line-height:1.9;font-size:1rem;margin-top:16px;font-family:'Cormorant Garamond',serif;">
+                        From fragrant Nasi Goereng to layered Parottas and rich Indian gravies, our menu is a culinary
+                        journey across two continents — crafted for the bold, the curious, and those who believe food is
+                        culture.
+                    </p>
+                    <div class="row g-3 mt-4">
+                        <div class="col-4 reveal d2">
+                            <div class="stat-box">
+                                <div class="stat-num">50<span style="font-size:1.2rem;">+</span></div>
+                                <div class="stat-label">Menu Items</div>
+                            </div>
+                        </div>
+                        <div class="col-4 reveal d3">
+                            <div class="stat-box">
+                                <div class="stat-num">100<span style="font-size:1rem;">%</span></div>
+                                <div class="stat-label">Halal</div>
+                            </div>
+                        </div>
+                        <div class="col-4 reveal d4">
+                            <div class="stat-box">
+                                <div class="stat-num">2</div>
+                                <div class="stat-label">Cuisines</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="cinematic-divider"></div>
+
+    <!-- MENU -->
+
+    <div id="mr">
+        <div class="mh">
+            <span class="mh-label">What We Serve</span>
+            <h2 class="mh-title">Our <em>Menu</em></h2>
+            <div class="gold-div"></div>
+            <p class="mh-sub">Malaysia · Singapore · South India — crafted fresh, served hot</p>
+        </div>
+
+        <div class="feat">
+            <div class="fc" onclick="switchCat('singapore',document.querySelector('[data-cat=singapore]'))">
+                <div class="fc-shine"></div>
+                <div class="fc-bg" style="background:linear-gradient(135deg,#2a1000,#0d0500);font-size:2.2rem;">
+                    <img src="./foods1.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                </div>
+                <div class="fc-info"><span class="fc-cat">Singapore · Malaysia</span>
+                    <div class="fc-name">Nasi Goereng Special</div>
+                </div>
+            </div>
+            <div class="fc" onclick="switchCat('parotta',document.querySelector('[data-cat=parotta]'))">
+                <div class="fc-shine"></div>
+                <div class="fc-bg" style="background:linear-gradient(135deg,#1a0f00,#0a0600);font-size:2.2rem;">
+                    <img src="./foods2.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                </div>
+                <div class="fc-info"><span class="fc-cat">Signature</span>
+                    <div class="fc-name">Murtaba &amp; Parotta</div>
+                </div>
+            </div>
+            <div class="fc" onclick="switchCat('gravy',document.querySelector('[data-cat=gravy]'))">
+                <div class="fc-shine"></div>
+                <div class="fc-bg" style="background:linear-gradient(135deg,#2a0000,#0d0000);font-size:2.2rem;">
+                    <img src="./foods4.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                </div>
+                <div class="fc-info"><span class="fc-cat">South Indian</span>
+                    <div class="fc-name">Pepper Chicken Gravy</div>
+                </div>
+            </div>
+            <div class="fc" onclick="switchCat('rice',document.querySelector('[data-cat=rice]'))">
+                <div class="fc-shine"></div>
+                <div class="fc-bg" style="background:linear-gradient(135deg,#0a0a1a,#050510);font-size:2.2rem;">
+                    <img src="./foods3.jpg" style="width: 100%; height: 100%; object-fit: cover;" alt="">
+                </div>
+                <div class="fc-info"><span class="fc-cat">Indo-Chinese</span>
+                    <div class="fc-name">Schezwan Noodles</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-layout">
+            <div class="cat-sidebar">
+                <div class="cat-item active" data-cat="singapore" onclick="switchCat('singapore',this)">
+                    <span class="cat-icon">🌏</span>
+                    <span class="cat-text"><span class="cat-name">Singapore & Malaysia</span><span class="cat-count">7
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+                <div class="cat-item" data-cat="rice" onclick="switchCat('rice',this)">
+                    <span class="cat-icon">🍚</span>
+                    <span class="cat-text"><span class="cat-name">Rice & Noodles</span><span class="cat-count">10
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+                <div class="cat-item" data-cat="parotta" onclick="switchCat('parotta',this)">
+                    <span class="cat-icon">🫓</span>
+                    <span class="cat-text"><span class="cat-name">Parotta</span><span class="cat-count">12
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+                <div class="cat-item" data-cat="sidedish" onclick="switchCat('sidedish',this)">
+                    <span class="cat-icon">🍖</span>
+                    <span class="cat-text"><span class="cat-name">Side Dishes</span><span class="cat-count">18
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+                <div class="cat-item" data-cat="gravy" onclick="switchCat('gravy',this)">
+                    <span class="cat-icon">🪔</span>
+                    <span class="cat-text"><span class="cat-name">Gravy & Eggs</span><span class="cat-count">12
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+                <div class="cat-item" data-cat="frozen" onclick="switchCat('frozen',this)">
+                    <span class="cat-icon">❄️</span>
+                    <span class="cat-text"><span class="cat-name">Singapore & Frozen</span><span class="cat-count">8
+                            items</span></span>
+                    <span class="cat-arrow">▶</span>
+                </div>
+            </div>
+
+            <div class="menu-content">
+
+                <div class="menu-section active" id="ms-singapore">
+                    <div class="cat-title">Singapore Malaysia Special</div>
+                    <div class="cat-desc">Authentic Goereng-style dishes with imported Nethili fish options</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Nasi Goereng Special Masala <span
+                                    class="pop">Popular</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>110</span>
+                        </div>
+                        <div class="menu-item"><span class="item-name">Mie Goereng Special Masala</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Mie Hoon Goereng Special Masala</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Dry (Imported Nethili Fish)</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Nasi Goereng (Imported Nethili Fish)</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Mie Goereng (Imported Nethili Fish)</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Mie Hoon Goereng (Nethili Fish)</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-section" id="ms-rice">
+                    <div class="cat-title">Rice & Noodles</div>
+                    <div class="cat-desc">Fresh Indo-Chinese flavours — BBQ, Schezwan, Peri Peri & more</div>
+                    <div class="sub-title">🍚 Rice Menu</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Chicken Rice</span><span class="item-price"><span
+                                    class="price-sym">₹</span>90</span></div>
+                        <div class="menu-item"><span class="item-name">BBQ Rice</span><span class="item-price"><span
+                                    class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Schezwan Rice</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Peri Peri Rice</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Signature Akka Fried Rice <span
+                                    class="pop">Chef's
+                                    Pick</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>130</span></div>
+                    </div>
+                    <div class="sub-title">🍜 Noodles Menu</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Chicken Noodles</span><span
+                                class="item-price"><span class="price-sym">₹</span>90</span></div>
+                        <div class="menu-item"><span class="item-name">BBQ Noodles</span><span class="item-price"><span
+                                    class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Schezwan Noodles <span
+                                    class="pop">Popular</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Peri Peri Noodles</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Signature Akka Fried Noodles</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-section" id="ms-parotta">
+                    <div class="cat-title">Singapore Malaysia Parotta</div>
+                    <div class="cat-desc">Flaky layered parottas — classic, stuffed & sweet varieties</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Parotta</span><span class="item-price"><span
+                                    class="price-sym">₹</span>15</span></div>
+                        <div class="menu-item"><span class="item-name">Murtaba <span
+                                    class="pop">Signature</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Chocolate Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>60</span></div>
+                        <div class="menu-item"><span class="item-name">Milo Parotta</span><span class="item-price"><span
+                                    class="price-sym">₹</span>99</span></div>
+                        <div class="menu-item"><span class="item-name">Banana Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>49</span></div>
+                        <div class="menu-item"><span class="item-name">Chettinad Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>49</span></div>
+                        <div class="menu-item"><span class="item-name">Egg Stuffing Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>59</span></div>
+                        <div class="menu-item"><span class="item-name">Cheese Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>49</span></div>
+                        <div class="menu-item"><span class="item-name">Garlic Cheese Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>49</span></div>
+                        <div class="menu-item"><span class="item-name">Kothu Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>79</span></div>
+                        <div class="menu-item"><span class="item-name">Flaster Parotta</span><span
+                                class="item-price"><span class="price-sym">₹</span>29</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Kothu Parotta <span
+                                    class="pop">Popular</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>90</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-section" id="ms-sidedish">
+                    <div class="cat-title">Indian Side Dish Special</div>
+                    <div class="cat-desc">South Indian dry preparations — bold spices, rich flavours</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Boneless Monica Chicken <span class="pop">Best
+                                    Seller</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Coconut Kerala Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Hot and Pepper Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Pallipalayam Special Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Malai <span
+                                    class="pop">Popular</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>160</span></div>
+                        <div class="menu-item"><span class="item-name">Pepper Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Peri Peri Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Sezwaan Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Lemon Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Honey Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Salt and Dry Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Garlic Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Hot Chilli Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>120</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Varuval</span><span
+                                class="item-price"><span class="price-sym">₹</span>100</span></div>
+                        <div class="menu-item"><span class="item-name">Hot Pepper</span><span class="item-price"><span
+                                    class="price-sym">₹</span>100</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Manjuriean</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Chukka</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Kerala Chicken Dry</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-section" id="ms-gravy">
+                    <div class="cat-title">Gravy & Eggs</div>
+                    <div class="cat-desc">Rich South Indian gravies & spiced egg preparations</div>
+                    <div class="sub-title">🪔 Indian Gravy</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Pepper Chicken Gravy <span
+                                    class="pop">Popular</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>120</span>
+                        </div>
+                        <div class="menu-item"><span class="item-name">Pallipalayam Chicken Gravy</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                        <div class="menu-item"><span class="item-name">Butter Chicken Gravy</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Hyderabad Chicken Gravy</span><span
+                                class="item-price"><span class="price-sym">₹</span>140</span></div>
+                        <div class="menu-item"><span class="item-name">Chettinad Chicken Gravy</span><span
+                                class="item-price"><span class="price-sym">₹</span>140</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Malai Gravy</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Kadai Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>130</span></div>
+                    </div>
+                    <div class="sub-title">🥚 Egg Special</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Hot Pepper Egg</span><span
+                                class="item-price"><span class="price-sym">₹</span>80</span></div>
+                        <div class="menu-item"><span class="item-name">Egg Masala</span><span class="item-price"><span
+                                    class="price-sym">₹</span>80</span></div>
+                        <div class="menu-item"><span class="item-name">Egg Bujji Masala</span><span
+                                class="item-price"><span class="price-sym">₹</span>100</span></div>
+                        <div class="menu-item"><span class="item-name">Egg Onion Pepper Fry</span><span
+                                class="item-price"><span class="price-sym">₹</span>70</span></div>
+                        <div class="menu-item"><span class="item-name">Hot Egg Chilli</span><span
+                                class="item-price"><span class="price-sym">₹</span>80</span></div>
+                    </div>
+                </div>
+
+                <div class="menu-section" id="ms-frozen">
+                    <div class="cat-title">Singapore &amp; Frozen Snacks</div>
+                    <div class="cat-desc">Singapore-style sides and crispy frozen favourites</div>
+                    <div class="sub-title">🐟 Singapore Side Dish</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Sweet and Hot Chicken</span><span
+                                class="item-price"><span class="price-sym">₹</span>150</span></div>
+                        <div class="menu-item"><span class="item-name">Chicken Stick</span><span
+                                class="item-price"><span class="price-sym">₹</span>140</span></div>
+                        <div class="menu-item"><span class="item-name">Imported Nethili Salty Fry <span
+                                    class="pop">Special</span></span><span class="item-price"><span
+                                    class="price-sym">₹</span>160</span>
+                        </div>
+                    </div>
+                    <div class="sub-title">❄️ Frozen Snacks</div>
+                    <div class="menu-grid">
+                        <div class="menu-item"><span class="item-name">Chicken Nuggets (5 pcs)</span><span
+                                class="item-price"><span class="price-sym">₹</span>99</span></div>
+                        <div class="menu-item"><span class="item-name">Prawn Nuggets (5 pcs)</span><span
+                                class="item-price"><span class="price-sym">₹</span>99</span></div>
+                        <div class="menu-item"><span class="item-name">Fish Fingers (5 pcs)</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                        <div class="menu-item"><span class="item-name">Cheese Balls (5 pcs)</span><span
+                                class="item-price"><span class="price-sym">₹</span>69</span></div>
+                        <div class="menu-item"><span class="item-name">Crab Lollipop (5 pcs)</span><span
+                                class="item-price"><span class="price-sym">₹</span>110</span></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="cinematic-divider"></div>
+
+    <!-- CHEF / PHILOSOPHY -->
+    <section id="ourchef">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="section-label reveal">The People Behind</p>
+                <h2 class="section-title reveal d1">Our <em>Chef</em></h2>
+                <div class="gold-divider reveal d2" style="margin:22px auto;"></div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4 reveal d1">
+                    <div class="chef-card">
+                        <div class="chef-icon">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF2.jpeg" alt="">
+                        </div>
+                        <div class="chef-name">Head Chef</div>
+                        <div class="chef-role">Malaysian Cuisine Specialist</div>
+                        <p class="chef-desc">Trained in the hawker traditions of Kuala Lumpur, our head chef brings the
+                            authentic layered spice profiles of Nasi Goereng and Mie specialties to Madurai.</p>
+                        <div class="specialty-tags">
+                            <span class="tag">Nasi Goereng</span>
+                            <span class="tag">Murtaba</span>
+                            <span class="tag">Mie Hoon</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal d2">
+                    <div class="chef-card">
+                        <div class="chef-icon">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF1.jpeg" alt="">
+                        </div>
+                        <div class="chef-name">Grill Master</div>
+                        <div class="chef-role">Indian Sides & Grills</div>
+                        <p class="chef-desc">A veteran of South Indian kitchens with a passion for perfecting the
+                            balance between heat and flavour in every dry chicken and gravy dish we serve.</p>
+                        <div class="specialty-tags">
+                            <span class="tag">Chicken Malai</span>
+                            <span class="tag">Pepper Chicken</span>
+                            <span class="tag">Kothu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 reveal d3">
+                    <div class="chef-card">
+                        <div class="chef-icon">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF3.jpeg" alt="">
+                        </div>
+                        <div class="chef-name">Parotta Artisan</div>
+                        <div class="chef-role">Singapore Malaysia Parotta</div>
+                        <p class="chef-desc">Mastering the art of layered parotta — from classic flaky varieties to
+                            creative Milo, Chocolate, and Chettinad fusion editions that define our identity.</p>
+                        <div class="specialty-tags">
+                            <span class="tag">Murtaba</span>
+                            <span class="tag">Milo Parotta</span>
+                            <span class="tag">Egg Stuffing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="philosophy-block reveal">
+                <blockquote>
+                    "Every dish we serve is a bridge between two worlds — the bold heritage of Malaysia and the deep
+                    soul of South Indian cooking. We don't just cook food, we carry stories across borders."
+                </blockquote>
+                <cite>— Take Away Kitchen Team, Madurai</cite>
+            </div>
+        </div>
+    </section>
+
+    <div class="cinematic-divider"></div>
+
+    <!-- CONTACT -->
+    <section id="contactus">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <p class="section-label reveal">Get In Touch</p>
+                    <h2 class="section-title reveal d1">Contact <em>Us</em></h2>
+                    <div class="gold-divider reveal d2"></div>
+                    <p class="reveal d2"
+                        style="color:rgba(255,245,228,0.55);line-height:1.9;font-size:1rem;margin-bottom:36px;font-family:'Cormorant Garamond',serif;">
+                        Ready to taste Malaysia? Visit us in Madurai, place a takeaway order, or reach out through our
+                        channels. We're here for you every day.
+                    </p>
+
+                    <div class="d-flex flex-column gap-3">
+                        <div class="contact-card reveal d2">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <div class="contact-label">Location</div>
+                                <div class="contact-value">Anna Nagar, Near Golcha Complex<br>HIG Colony, 2nd Street,
+                                    Madurai</div>
+                            </div>
+                        </div>
+                        <div class="contact-card reveal d3">
+                            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+                            <div>
+                                <div class="contact-label">Instagram</div>
+                                <div class="contact-value">
+                                    <a href="https://www.instagram.com/take__away001?igsh=MWQyNmkzbzdxN2tvOQ=="
+                                        target="_blank">@take__away001</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-card reveal d4">
+                            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <div class="contact-label">Hours</div>
+                                <div class="contact-value">Open Daily · Takeaway Available<br>Halal Certified Kitchen
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="contact-form-wrap reveal-right">
+                        <p class="section-label" style="margin-bottom:24px;">Send a Message</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label class="form-label">Your Name</label>
+                                <input type="text" id="name" class="form-control" placeholder="Enter your name">
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label">Phone Number</label>
+                                <input type="tel" id="phone" class="form-control" placeholder="+91 XXXXX XXXXX">
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Interested In</label>
+                                <select id="category" class="form-select">
+                                    <option value="">Select a category.</option>
+                                    <option>Singapore / Malaysia Special</option>
+                                    <option>Rice & Noodles</option>
+                                    <option>Parotta</option>
+                                    <option>Side Dishes</option>
+                                    <option>Gravy & Eggs</option>
+                                    <option>Frozen Snacks</option>
+                                    <option>Bulk / Event Order</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label class="form-label">Message</label>
+                                <textarea id="message" class="form-control" rows="4"
+                                    placeholder="Tell us your order or inquiry..."></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="button" class="btn-gold w-100" onclick="handleFormSubmit(this)">Send
+                                    Message <i class="fas fa-arrow-right ms-2"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="map-wrap mt-4 reveal">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3930.0!2d78.1198!3d9.9252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sAnna+Nagar+Madurai!5e0!3m2!1sen!2sin!4v1"
+                            allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 pb-4">
+                <div class="col-lg-4">
+                    <div class="footer-brand">Take Away</div>
+                    <div class="footer-tagline">Taste of Malaysia · Singapore · India</div>
+                    <p style="color:rgba(255,245,228,0.35);font-size:0.82rem;margin-top:16px;line-height:1.8;">Bold
+                        Flavours. True Heritage. Made with Love. Serving authentic Malaysian and Indian cuisine from the
+                        heart of Madurai.</p>
+                    <div style="margin-top:20px;">
+                        <a href="https://www.instagram.com/take__away001?igsh=MWQyNmkzbzdxN2tvOQ==" target="_blank"
+                            style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(201,168,76,0.3);color:var(--gold);text-decoration:none;font-size:1rem;transition:all 0.3s;"
+                            onmouseover="this.style.background='var(--gold)';this.style.color='#1a0000'"
+                            onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <p
+                        style="font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+                        Quick Links</p>
+                    <ul style="list-style:none;padding:0;">
+                        <li style="margin-bottom:10px;"><a href="#hero"
+                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
+                                onmouseover="this.style.color='var(--gold)'"
+                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Home</a></li>
+                        <li style="margin-bottom:10px;"><a href="#about"
+                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
+                                onmouseover="this.style.color='var(--gold)'"
+                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">About Us</a></li>
+                        <li style="margin-bottom:10px;"><a href="#ourmenu"
+                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
+                                onmouseover="this.style.color='var(--gold)'"
+                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Our Menu</a></li>
+                        <li style="margin-bottom:10px;"><a href="#ourchef"
+                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
+                                onmouseover="this.style.color='var(--gold)'"
+                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Our Chef</a></li>
+                        <li style="margin-bottom:10px;"><a href="#contactus"
+                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
+                                onmouseover="this.style.color='var(--gold)'"
+                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <p
+                        style="font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
+                        Find Us</p>
+                    <p style="color:rgba(255,245,228,0.45);font-size:0.85rem;line-height:1.9;">
+                        Anna Nagar<br>Near Golcha Complex<br>HIG Colony, 2nd Street<br>Madurai, Tamil Nadu
+                    </p>
+                    <div style="margin-top:20px;display:flex;align-items:center;gap:10px;">
+                        <div style="font-size:1.2rem;">حلال</div>
+                        <div
+                            style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.6);">
+                            Halal Certified</div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2025 Take Away – Taste of Malaysia · Madurai · All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ── LOADER ──────────────────────────────────
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2200);
+        });
+
+        // ── CUSTOM CURSOR ────────────────────────────
+        const cursor = document.getElementById('cursor');
+        const cursorRing = document.getElementById('cursorRing');
+        let mx = 0, my = 0, rx = 0, ry = 0;
+        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+        function animateCursor() {
+            rx += (mx - rx) * 0.18;
+            ry += (my - ry) * 0.18;
+            cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
+            cursorRing.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+        document.querySelectorAll('a,button,.menu-tab,.menu-item,.chef-card,.contact-card,.featured-card').forEach(el => {
+            el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; cursorRing.style.opacity = '0.9'; });
+            el.addEventListener('mouseleave', () => { cursor.style.width = '12px'; cursor.style.height = '12px'; cursorRing.style.opacity = '0.5'; });
+        });
+
+        // ── NAVBAR SCROLL ────────────────────────────
+        window.addEventListener('scroll', () => {
+            const nb = document.getElementById('navbar');
+            const btt = document.getElementById('backToTop');
+            if (window.scrollY > 60) { nb.classList.add('scrolled'); } else { nb.classList.remove('scrolled'); }
+            if (window.scrollY > 400) { btt.classList.add('visible'); } else { btt.classList.remove('visible'); }
+        });
+
+        // ── SCROLL REVEAL ────────────────────────────
+        const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+        }, { threshold: 0.12 });
+        revealEls.forEach(el => observer.observe(el));
+
+        // ── PREMIUM HERO ENGINE (slideshow + sparks + glow + parallax + magnet) ──
+        (function () {
+            const DURATION = 6000;
+            document.documentElement.style.setProperty('--slide-duration', (DURATION / 1000) + 's');
+
+            const hero = document.getElementById('hero');
+            const slides = document.querySelectorAll('.hero-slide');
+            const cuisines = document.querySelectorAll('.cuisine');
+            const dishImgMask = document.getElementById('dishImgMask');
+            const dishName = document.getElementById('dishName');
+            const slideCurrent = document.getElementById('slideCurrent');
+            const countFill = document.getElementById('countFill');
+            const slideWipe = document.getElementById('slideWipe');
+            const cursorGlow = document.getElementById('cursorGlow');
+            const heroContent = document.getElementById('heroContent');
+            const dishShowcase = document.getElementById('dishShowcase');
+            const slideCounter = document.getElementById('slideCounter');
+
+            let active = 0;
+            let heroTimer = null;
+
+            /* ---------- Floating sparks ---------- */
+            function makeSparks(n) {
+                const frag = document.createDocumentFragment();
+                for (let i = 0; i < n; i++) {
+                    const s = document.createElement('div');
+                    s.className = 'spark';
+                    const size = 2 + Math.random() * 3.5;
+                    s.style.width = size + 'px';
+                    s.style.height = size + 'px';
+                    s.style.left = Math.random() * 100 + '%';
+                    s.style.bottom = '-10px';
+                    const dur = 9 + Math.random() * 10;
+                    s.style.animationDuration = dur + 's';
+                    s.style.animationDelay = (Math.random() * dur) + 's';
+                    frag.appendChild(s);
+                }
+                document.getElementById('sparkContainer').appendChild(frag);
+            }
+            makeSparks(22);
+
+            /* ---------- Cursor glow + parallax ---------- */
+            let pmx = 0.5, pmy = 0.5, gx = 0.5, gy = 0.5;
+            if (hero) {
+                hero.addEventListener('mousemove', e => {
+                    const r = hero.getBoundingClientRect();
+                    pmx = (e.clientX - r.left) / r.width;
+                    pmy = (e.clientY - r.top) / r.height;
+                    if (cursorGlow) {
+                        cursorGlow.classList.add('on');
+                        cursorGlow.style.left = e.clientX - r.left + 'px';
+                        cursorGlow.style.top = e.clientY - r.top + 'px';
+                    }
+                });
+                hero.addEventListener('mouseleave', () => { if (cursorGlow) cursorGlow.classList.remove('on'); });
+            }
+
+            function parallaxLoop() {
+                gx += (pmx - gx) * 0.06;
+                gy += (pmy - gy) * 0.06;
+                const dx = (gx - 0.5) * 18;
+                const dy = (gy - 0.5) * 14;
+                if (heroContent) heroContent.style.transform = `translate(${dx * 0.4}px, ${dy * 0.4}px)`;
+                if (dishShowcase) dishShowcase.style.transform = `translate(${-dx * 0.8}px, ${-dy * 0.8}px)`;
+                if (slideCounter) slideCounter.style.transform = `translate(${-dx * 0.8}px, ${-dy * 0.8}px)`;
+                requestAnimationFrame(parallaxLoop);
+            }
+            requestAnimationFrame(parallaxLoop);
+
+            /* ---------- Magnetic buttons ---------- */
+            document.querySelectorAll('.magnet').forEach(btn => {
+                btn.addEventListener('mousemove', e => {
+                    const r = btn.getBoundingClientRect();
+                    const dx = (e.clientX - r.left - r.width / 2) / r.width;
+                    const dy = (e.clientY - r.top - r.height / 2) / r.height;
+                    btn.style.transform = `translate(${dx * 14}px, ${dy * 10 - 3}px)`;
+                });
+                btn.addEventListener('mouseleave', () => btn.style.transform = '');
+            });
+
+            /* ---------- Slide engine ---------- */
+            function renderProgress() {
+                if (!countFill || !cuisines.length) return;
+                countFill.style.transition = 'none';
+                countFill.style.width = '0%';
+                cuisines[active].classList.remove('active');
+                void countFill.offsetWidth;
+                cuisines[active].classList.add('active');
+                requestAnimationFrame(() => {
+                    countFill.style.transition = `width ${DURATION / 1000}s linear`;
+                    countFill.style.width = '100%';
+                });
+            }
+
+            function goTo(index, restart = true) {
+                slides[active].classList.remove('active');
+                if (cuisines.length) cuisines[active].classList.remove('active');
+
+                active = index;
+                const slide = slides[active];
+
+                slides[active].classList.add('active');
+                slides[active].style.animation = 'none';
+                void slides[active].offsetWidth;
+                slides[active].style.animation = '';
+
+                // cinematic wipe
+                if (slideWipe) {
+                    slideWipe.classList.remove('run');
+                    void slideWipe.offsetWidth;
+                    slideWipe.classList.add('run');
+                }
+
+                // crossfade dish image
+                if (dishImgMask) {
+                    const oldImg = dishImgMask.querySelector('img');
+                    const newImg = document.createElement('img');
+                    newImg.src = slide.dataset.dishImg;
+                    newImg.alt = 'Signature dish';
+                    newImg.className = 'incoming';
+                    if (oldImg) oldImg.classList.add('outgoing');
+                    dishImgMask.appendChild(newImg);
+                    setTimeout(() => { if (oldImg) oldImg.remove(); }, 750);
+                }
+
+                // swap dish name
+                if (dishName) {
+                    dishName.classList.add('swap');
+                    setTimeout(() => {
+                        dishName.innerHTML = slide.dataset.dishName;
+                        dishName.classList.remove('swap');
+                    }, 220);
+                }
+
+                // bump counter
+                if (slideCurrent) {
+                    slideCurrent.classList.add('bump');
+                    setTimeout(() => slideCurrent.classList.remove('bump'), 400);
+                    slideCurrent.textContent = String(active + 1).padStart(2, '0');
+                }
+
+                renderProgress();
+
+                if (restart) {
+                    clearInterval(heroTimer);
+                    heroTimer = setInterval(() => goTo((active + 1) % slides.length), DURATION);
+                }
+            }
+
+            cuisines.forEach(c => {
+                c.addEventListener('click', () => goTo(parseInt(c.dataset.slide, 10)));
+            });
+
+            if (slides.length) {
+                renderProgress();
+                heroTimer = setInterval(() => goTo((active + 1) % slides.length), DURATION);
+            }
+        })();
+
+        // ── MENU TABS ────────────────────────────────
+        function switchTab(id, btn) {
+            document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById('tab-' + id).classList.add('active');
+        }
+
+        // ── MENU CATEGORY SWITCH ─────────────────────
+        window.switchCat = function (id, el) {
+    // Active section hide
+    const current = document.querySelector('.menu-section.active');
+    if (current) current.classList.remove('active');
+
+    // Active sidebar item
+    document.querySelectorAll('.cat-item')
+        .forEach(c => c.classList.remove('active'));
+
+    // New section show — requestAnimationFrame இல்லாம direct
+    const next = document.getElementById('ms-' + id);
+    if (next) next.classList.add('active');
+
+    if (el) el.classList.add('active');
+}
+
+        // ── SMOOTH NAV ───────────────────────────────
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth' });
+                    // close mobile nav
+                    const nav = document.getElementById('navMenu');
+                    if (nav.classList.contains('show')) {
+                        nav.classList.remove('show');
+                    }
+                }
+            });
+        });
+
+        // ── COUNTER ANIMATION ────────────────────────
+        function animateCounters() {
+            document.querySelectorAll('.stat-num').forEach(el => {
+                const target = parseInt(el.textContent);
+                if (isNaN(target)) return;
+                const suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
+                let count = 0;
+                const step = Math.ceil(target / 50);
+                const interval = setInterval(() => {
+                    count = Math.min(count + step, target);
+                    el.innerHTML = count + suffix;
+                    if (count >= target) clearInterval(interval);
+                }, 30);
+            });
+        }
+        const counterSection = document.querySelector('.stat-box');
+        const counterObserver = new IntersectionObserver(entries => {
+            if (entries[0].isIntersecting) { animateCounters(); counterObserver.disconnect(); }
+        }, { threshold: 0.5 });
+        if (counterSection) counterObserver.observe(counterSection);
+    </script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
+        import {
+            getFirestore,
+            collection,
+            addDoc,
+            serverTimestamp
+        } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDU8agHhOlCLnmG9EyxxXRjsSGpF21MWXA",
+            authDomain: "restaurant-website-8d46b.firebaseapp.com",
+            projectId: "restaurant-website-8d46b",
+            storageBucket: "restaurant-website-8d46b.firebasestorage.app",
+            messagingSenderId: "473108303794",
+            appId: "1:473108303794:web:f556610076fce04a4f5eab",
+            measurementId: "G-925KKZ37SL"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getFirestore(app);
+
+        window.handleFormSubmit = async function (btn) {
+
+            const name = document.getElementById("name").value.trim();
+            const phone = document.getElementById("phone").value.trim();
+            const category = document.getElementById("category").value;
+            const message = document.getElementById("message").value.trim();
+
+            if (!name || !phone || !category || !message) {
+                alert("Please fill all fields");
+                return;
+            }
+
+            try {
+
+                btn.disabled = true;
+                btn.innerHTML = "Sending...";
+
+                await addDoc(collection(db, "contacts"), {
+                    name: name,
+                    phone: phone,
+                    category: category,
+                    message: message,
+                    createdAt: serverTimestamp()
+                });
+
+                alert("Message Sent Successfully!");
+
+                document.getElementById("name").value = "";
+                document.getElementById("phone").value = "";
+                document.getElementById("category").selectedIndex = 0;
+                document.getElementById("message").value = "";
+
+            } catch (error) {
+
+                console.error(error);
+                alert("Failed to send message");
+
+            } finally {
+
+                btn.disabled = false;
+                btn.innerHTML = 'Send Message <i class="fas fa-arrow-right ms-2"></i>';
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
