@@ -10,9 +10,7 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="./index.css">
 </head>
 
@@ -38,113 +36,133 @@
         <i class="fas fa-chevron-up"></i>
     </div>
 
-    <!-- NAVBAR -->
-    <nav id="navbar" class="navbar navbar-expand-lg">
-        <div class="container-fluid px-4">
-            <a class="nav-brand navbar-brand" href="#hero">Take <span>Away</span></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-                <ul class="navbar-nav gap-1">
-                    <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ourmenu">Our Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#ourchef">Our Chef</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contactus">Contact</a></li>
-                </ul>
-            </div>
+   <!-- NAVBAR -->
+   <nav id="navbar" class="navbar navbar-expand-lg">
+    <div class="container-fluid px-4">
+        <a class="nav-brand navbar-brand" href="#hero">Take <span>Away</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+            aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="toggler-circle">
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+                <span class="toggler-bar"></span>
+            </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+            <ul class="navbar-nav gap-1">
+                <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ourmenu">Our Menu</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ourchef">Our Chef</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contactus">Contact</a></li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
 
     <!-- HERO -->
- 
-<section id="hero">
-    <div class="hero-slides" id="heroSlides">
-        <div class="hero-slide active"
-             style="background-image:url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1600&auto=format&fit=crop')"
-             data-dish-img="https://images.unsplash.com/photo-1626508035297-0d1eb1303f37?q=80&w=600&auto=format&fit=crop"
-             data-dish-name="Beef Rendang"></div>
+    <section id="hero">
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide active"
+                style="background-image:url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?q=80&w=1600&auto=format&fit=crop')"
+                data-dish-img="https://images.unsplash.com/photo-1626508035297-0d1eb1303f37?q=80&w=600&auto=format&fit=crop"
+                data-dish-name="Beef Rendang"></div>
 
-        <div class="hero-slide"
-             style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop')"
-             data-dish-img="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?q=80&w=600&auto=format&fit=crop"
-             data-dish-name="Hainanese Chicken Rice"></div>
+            <div class="hero-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?q=80&w=1600&auto=format&fit=crop')"
+                data-dish-img="https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?q=80&w=600&auto=format&fit=crop"
+                data-dish-name="Hainanese Chicken Rice"></div>
 
-        <div class="hero-slide"
-             style="background-image:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop')"
-             data-dish-img="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=600&auto=format&fit=crop"
-             data-dish-name="Butter Chicken &amp; Naan"></div>
-    </div>
-
-    <div class="hero-overlay"></div>
-    <div class="hero-grain"></div>
-    <div class="slide-wipe" id="slideWipe"></div>
-
-    <div class="hero-lines">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-
-    <div id="sparkContainer"></div>
-    <div class="cursor-glow" id="cursorGlow"></div>
-
-    <!-- Rotating seal -->
-    <div class="seal">
-        <svg viewBox="0 0 100 100">
-            <defs>
-                <path id="sealPath" d="M50,50 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/>
-            </defs>
-            <text font-size="5.4" letter-spacing="2.5" fill="var(--gold)">
-                <textPath href="#sealPath">★ MADURAI &#160;&#160;★ MALAYSIA &#160;&#160;★ SINGAPORE &#160;&#160;★ INDIA &#160;&#160;</textPath>
-            </text>
-        </svg>
-        <div class="seal-center">TA</div>
-    </div>
-
-
-
-    <!-- Slide counter / progress -->
-    <div class="slide-counter" id="slideCounter">
-        <span class="count-current" id="slideCurrent">01</span>
-        <span class="count-track"><span class="count-fill" id="countFill"></span></span>
-        <span class="count-total">03</span>
-    </div>
-
-    <div class="hero-content" id="heroContent">
-        <p class="hero-eyebrow"><span class="deco-line"></span> Bold Flavours · True Heritage · Est. Madurai <span class="deco-line right"></span></p>
-
-        <h1 class="hero-title">
-            <span class="title-line">
-                <span class="ltr" style="animation-delay:.5s">T</span><span class="ltr" style="animation-delay:.56s">a</span><span class="ltr" style="animation-delay:.62s">k</span><span class="ltr" style="animation-delay:.68s">e</span>
-            </span>
-            <span class="title-line line2 ltr-wrap">
-                <span class="ltr" style="animation-delay:.82s">A</span><span class="ltr" style="animation-delay:.88s">w</span><span class="ltr" style="animation-delay:.94s">a</span><span class="ltr" style="animation-delay:1s">y</span>
-            </span>
-        </h1>
-
-        <p class="hero-subtitle" id="cuisineRow">
-            <span class="cuisine active" data-slide="0">Malaysia</span>
-            <span class="sep">✦</span>
-            <span class="cuisine" data-slide="1">Singapore</span>
-            <span class="sep">✦</span>
-            <span class="cuisine" data-slide="2">Indian Specials</span>
-        </p>
-
-        <div class="hero-cta">
-            <a href="#ourmenu" class="btn-gold magnet">Explore Menu</a>
-            <a href="#contactus" class="btn-outline-gold magnet">Order Now</a>
+            <div class="hero-slide"
+                style="background-image:url('https://images.unsplash.com/photo-1601050690597-df0568f70950?q=80&w=1600&auto=format&fit=crop')"
+                data-dish-img="https://images.unsplash.com/photo-1631515243349-e0cb75fb8d3a?q=80&w=600&auto=format&fit=crop"
+                data-dish-name="Butter Chicken &amp; Naan"></div>
         </div>
-    </div>
 
-    <div class="hero-stats">
-        <div class="hero-stat"><div class="num">50+</div><div class="lbl">Menu Items</div></div>
-        <div class="hero-stat"><div class="num">100%</div><div class="lbl">Halal Certified</div></div>
-        <div class="hero-stat"><div class="num">2</div><div class="lbl">Cuisines Fused</div></div>
-        <div class="hero-stat"><div class="num">Daily</div><div class="lbl">Fresh &amp; Hot</div></div>
-    </div>
-</section>
+        <div class="hero-overlay"></div>
+        <div class="hero-grain"></div>
+        <div class="slide-wipe" id="slideWipe"></div>
+
+        <div class="hero-lines">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
+        <div id="sparkContainer"></div>
+        <div class="cursor-glow" id="cursorGlow"></div>
+
+        <!-- Rotating seal -->
+        <div class="seal">
+            <svg viewBox="0 0 100 100">
+                <defs>
+                    <path id="sealPath" d="M50,50 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0" />
+                </defs>
+                <text font-size="5.4" letter-spacing="2.5" fill="var(--gold)">
+                    <textPath href="#sealPath">★ MADURAI &#160;&#160;★ MALAYSIA &#160;&#160;★ SINGAPORE &#160;&#160;★
+                        INDIA &#160;&#160;</textPath>
+                </text>
+            </svg>
+            <div class="seal-center">TA</div>
+        </div>
+
+        <!-- Slide counter / progress -->
+        <div class="slide-counter" id="slideCounter">
+            <span class="count-current" id="slideCurrent">01</span>
+            <span class="count-track"><span class="count-fill" id="countFill"></span></span>
+            <span class="count-total">03</span>
+        </div>
+
+        <div class="hero-content" id="heroContent">
+            <p class="hero-eyebrow"><span class="deco-line"></span> Bold Flavours · True Heritage · Est. Madurai <span
+                    class="deco-line right"></span></p>
+
+            <h1 class="hero-title">
+                <span class="title-line">
+                    <span class="ltr" style="animation-delay:.5s">T</span><span class="ltr"
+                        style="animation-delay:.56s">a</span><span class="ltr"
+                        style="animation-delay:.62s">k</span><span class="ltr" style="animation-delay:.68s">e</span>
+                </span>
+                <span class="title-line line2 ltr-wrap">
+                    <span class="ltr" style="animation-delay:.82s">A</span><span class="ltr"
+                        style="animation-delay:.88s">w</span><span class="ltr"
+                        style="animation-delay:.94s">a</span><span class="ltr" style="animation-delay:1s">y</span>
+                </span>
+            </h1>
+
+            <p class="hero-subtitle" id="cuisineRow">
+                <span class="cuisine active" data-slide="0">Malaysia</span>
+                <span class="sep">✦</span>
+                <span class="cuisine" data-slide="1">Singapore</span>
+                <span class="sep">✦</span>
+                <span class="cuisine" data-slide="2">Indian Specials</span>
+            </p>
+
+            <div class="hero-cta">
+                <a href="#ourmenu" class="btn-gold magnet">Explore Menu</a>
+                <a href="#contactus" class="btn-outline-gold magnet">Order Now</a>
+            </div>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="num">50+</div>
+                <div class="lbl">Menu Items</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">100%</div>
+                <div class="lbl">Halal Certified</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">2</div>
+                <div class="lbl">Cuisines Fused</div>
+            </div>
+            <div class="hero-stat">
+                <div class="num">Daily</div>
+                <div class="lbl">Fresh &amp; Hot</div>
+            </div>
+        </div>
+    </section>
 
     <!-- ABOUT -->
     <section id="about">
@@ -154,7 +172,6 @@
                     <div class="about-logo-wrap" style="padding:60px 0;">
                         <div class="about-logo-ring-2"></div>
                         <div class="about-logo-ring"></div>
-                        <!-- Logo circle with branding -->
                         <div class="about-logo"
                             style="display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#5C0000,#8B0000);margin:auto;">
                             <div style="text-align:center;padding:20px;">
@@ -212,8 +229,9 @@
     <div class="cinematic-divider"></div>
 
     <!-- MENU -->
+    <p id="ourmenu"></p>
 
-    <div id="mr">
+    <div class="men">
         <div class="mh">
             <span class="mh-label">What We Serve</span>
             <h2 class="mh-title">Our <em>Menu</em></h2>
@@ -523,7 +541,7 @@
                 <div class="col-lg-4 reveal d1">
                     <div class="chef-card">
                         <div class="chef-icon">
-                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF2.jpeg" alt="">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF1.jpg" alt="">
                         </div>
                         <div class="chef-name">Head Chef</div>
                         <div class="chef-role">Malaysian Cuisine Specialist</div>
@@ -539,7 +557,7 @@
                 <div class="col-lg-4 reveal d2">
                     <div class="chef-card">
                         <div class="chef-icon">
-                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF1.jpeg" alt="">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF2.jpg" alt="">
                         </div>
                         <div class="chef-name">Grill Master</div>
                         <div class="chef-role">Indian Sides & Grills</div>
@@ -555,7 +573,7 @@
                 <div class="col-lg-4 reveal d3">
                     <div class="chef-card">
                         <div class="chef-icon">
-                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF3.jpeg" alt="">
+                            <img style="width: 100%; height:100%; border-radius: 50%;" src="./CHEF3.jpg" alt="">
                         </div>
                         <div class="chef-name">Parotta Artisan</div>
                         <div class="chef-role">Singapore Malaysia Parotta</div>
@@ -672,337 +690,91 @@
             </div>
         </div>
     </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="container">
-            <div class="row g-4 pb-4">
-                <div class="col-lg-4">
-                    <div class="footer-brand">Take Away</div>
-                    <div class="footer-tagline">Taste of Malaysia · Singapore · India</div>
-                    <p style="color:rgba(255,245,228,0.35);font-size:0.82rem;margin-top:16px;line-height:1.8;">Bold
-                        Flavours. True Heritage. Made with Love. Serving authentic Malaysian and Indian cuisine from the
-                        heart of Madurai.</p>
-                    <div style="margin-top:20px;">
-                        <a href="https://www.instagram.com/take__away001?igsh=MWQyNmkzbzdxN2tvOQ==" target="_blank"
-                            style="display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:1px solid rgba(201,168,76,0.3);color:var(--gold);text-decoration:none;font-size:1rem;transition:all 0.3s;"
-                            onmouseover="this.style.background='var(--gold)';this.style.color='#1a0000'"
-                            onmouseout="this.style.background='transparent';this.style.color='var(--gold)'">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <p
-                        style="font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
-                        Quick Links</p>
-                    <ul style="list-style:none;padding:0;">
-                        <li style="margin-bottom:10px;"><a href="#hero"
-                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
-                                onmouseover="this.style.color='var(--gold)'"
-                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Home</a></li>
-                        <li style="margin-bottom:10px;"><a href="#about"
-                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
-                                onmouseover="this.style.color='var(--gold)'"
-                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">About Us</a></li>
-                        <li style="margin-bottom:10px;"><a href="#ourmenu"
-                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
-                                onmouseover="this.style.color='var(--gold)'"
-                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Our Menu</a></li>
-                        <li style="margin-bottom:10px;"><a href="#ourchef"
-                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
-                                onmouseover="this.style.color='var(--gold)'"
-                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Our Chef</a></li>
-                        <li style="margin-bottom:10px;"><a href="#contactus"
-                                style="color:rgba(255,245,228,0.4);text-decoration:none;font-size:0.85rem;letter-spacing:1px;transition:color 0.3s;"
-                                onmouseover="this.style.color='var(--gold)'"
-                                onmouseout="this.style.color='rgba(255,245,228,0.4)'">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4">
-                    <p
-                        style="font-size:0.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;">
-                        Find Us</p>
-                    <p style="color:rgba(255,245,228,0.45);font-size:0.85rem;line-height:1.9;">
-                        Anna Nagar<br>Near Golcha Complex<br>HIG Colony, 2nd Street<br>Madurai, Tamil Nadu
-                    </p>
-                    <div style="margin-top:20px;display:flex;align-items:center;gap:10px;">
-                        <div style="font-size:1.2rem;">حلال</div>
-                        <div
-                            style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.6);">
-                            Halal Certified</div>
-                    </div>
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="row g-4 pb-4">
+            <!-- Brand -->
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-brand">Take Away</div>
+                <div class="footer-tagline">Taste of Malaysia · Singapore · India</div>
+                <p style="color:rgba(255,245,228,0.35);font-size:0.82rem;margin-top:16px;line-height:1.8;">Bold
+                    Flavours. True Heritage. Made with Love. Serving authentic Malaysian and Indian cuisine from the
+                    heart of Madurai.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/take__away001?igsh=MWQyNmkzbzdxN2tvOQ==" target="_blank"
+                        class="social-icon" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/yourpagehere" target="_blank"
+                        class="social-icon" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://wa.me/919999999999" target="_blank"
+                        class="social-icon" aria-label="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                © 2025 Take Away – Taste of Malaysia · Madurai · All Rights Reserved
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6">
+                <p class="footer-heading">Quick Links</p>
+                <ul style="list-style:none;padding:0;">
+                    <li style="margin-bottom:10px;"><a href="#hero" class="footer-link">Home</a></li>
+                    <li style="margin-bottom:10px;"><a href="#about" class="footer-link">About Us</a></li>
+                    <li style="margin-bottom:10px;"><a href="#ourmenu" class="footer-link">Our Menu</a></li>
+                    <li style="margin-bottom:10px;"><a href="#ourchef" class="footer-link">Our Chef</a></li>
+                    <li style="margin-bottom:10px;"><a href="#contactus" class="footer-link">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-3 col-md-6">
+                <p class="footer-heading">Contact Us</p>
+                <p class="footer-contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <a href="tel:+919999999999" class="footer-link">+91 99999 99999</a>
+                </p>
+                <p class="footer-contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:info@takeaway.com" class="footer-link">info@takeaway.com</a>
+                </p>
+                <p class="footer-contact-item">
+                    <i class="fas fa-clock"></i>
+                    <span style="color:rgba(255,245,228,0.45);font-size:0.85rem;">
+                        11:00 AM – 11:00 PM<br>Open All Days
+                    </span>
+                </p>
+            </div>
+
+            <!-- Find Us -->
+            <div class="col-lg-3 col-md-6">
+                <p class="footer-heading">Find Us</p>
+                <p style="color:rgba(255,245,228,0.45);font-size:0.85rem;line-height:1.9;">
+                    Anna Nagar<br>Near Golcha Complex<br>HIG Colony, 2nd Street<br>Madurai, Tamil Nadu
+                </p>
+                <div style="margin-top:20px;display:flex;align-items:center;gap:10px;">
+                    <div style="font-size:1.2rem;">حلال</div>
+                    <div
+                        style="font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;color:rgba(201,168,76,0.6);">
+                        Halal Certified</div>
+                </div>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            © 2026 Take Away – Taste of Malaysia · Madurai · All Rights Reserved
+        </div>
+    </div>
+</footer>
 
+    <!-- Bootstrap JS (must come before custom scripts) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // ── LOADER ──────────────────────────────────
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                document.getElementById('loader').classList.add('hidden');
-            }, 2200);
-        });
+    <!-- Custom JS -->
+    <script src="./index.js" defer></script>
+    <!-- Firebase (ES module — auto-deferred) -->
+    <script type="module" src="./firebase.js"></script>
 
-        // ── CUSTOM CURSOR ────────────────────────────
-        const cursor = document.getElementById('cursor');
-        const cursorRing = document.getElementById('cursorRing');
-        let mx = 0, my = 0, rx = 0, ry = 0;
-        document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-        function animateCursor() {
-            rx += (mx - rx) * 0.18;
-            ry += (my - ry) * 0.18;
-            cursor.style.transform = `translate(${mx - 6}px, ${my - 6}px)`;
-            cursorRing.style.transform = `translate(${rx - 18}px, ${ry - 18}px)`;
-            requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-        document.querySelectorAll('a,button,.menu-tab,.menu-item,.chef-card,.contact-card,.featured-card').forEach(el => {
-            el.addEventListener('mouseenter', () => { cursor.style.width = '20px'; cursor.style.height = '20px'; cursorRing.style.opacity = '0.9'; });
-            el.addEventListener('mouseleave', () => { cursor.style.width = '12px'; cursor.style.height = '12px'; cursorRing.style.opacity = '0.5'; });
-        });
-
-        // ── NAVBAR SCROLL ────────────────────────────
-        window.addEventListener('scroll', () => {
-            const nb = document.getElementById('navbar');
-            const btt = document.getElementById('backToTop');
-            if (window.scrollY > 60) { nb.classList.add('scrolled'); } else { nb.classList.remove('scrolled'); }
-            if (window.scrollY > 400) { btt.classList.add('visible'); } else { btt.classList.remove('visible'); }
-        });
-
-        // ── SCROLL REVEAL ────────────────────────────
-        const revealEls = document.querySelectorAll('.reveal,.reveal-left,.reveal-right,.reveal-scale');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-        }, { threshold: 0.12 });
-        revealEls.forEach(el => observer.observe(el));
-
-        // ── PREMIUM HERO ENGINE (slideshow + sparks + glow + parallax + magnet) ──
-        (function () {
-            const DURATION = 6000;
-            document.documentElement.style.setProperty('--slide-duration', (DURATION / 1000) + 's');
-
-            const hero = document.getElementById('hero');
-            const slides = document.querySelectorAll('.hero-slide');
-            const cuisines = document.querySelectorAll('.cuisine');
-            const dishImgMask = document.getElementById('dishImgMask');
-            const dishName = document.getElementById('dishName');
-            const slideCurrent = document.getElementById('slideCurrent');
-            const countFill = document.getElementById('countFill');
-            const slideWipe = document.getElementById('slideWipe');
-            const cursorGlow = document.getElementById('cursorGlow');
-            const heroContent = document.getElementById('heroContent');
-            const dishShowcase = document.getElementById('dishShowcase');
-            const slideCounter = document.getElementById('slideCounter');
-
-            let active = 0;
-            let heroTimer = null;
-
-            /* ---------- Floating sparks ---------- */
-            function makeSparks(n) {
-                const frag = document.createDocumentFragment();
-                for (let i = 0; i < n; i++) {
-                    const s = document.createElement('div');
-                    s.className = 'spark';
-                    const size = 2 + Math.random() * 3.5;
-                    s.style.width = size + 'px';
-                    s.style.height = size + 'px';
-                    s.style.left = Math.random() * 100 + '%';
-                    s.style.bottom = '-10px';
-                    const dur = 9 + Math.random() * 10;
-                    s.style.animationDuration = dur + 's';
-                    s.style.animationDelay = (Math.random() * dur) + 's';
-                    frag.appendChild(s);
-                }
-                document.getElementById('sparkContainer').appendChild(frag);
-            }
-            makeSparks(22);
-
-            /* ---------- Cursor glow + parallax ---------- */
-            let pmx = 0.5, pmy = 0.5, gx = 0.5, gy = 0.5;
-            if (hero) {
-                hero.addEventListener('mousemove', e => {
-                    const r = hero.getBoundingClientRect();
-                    pmx = (e.clientX - r.left) / r.width;
-                    pmy = (e.clientY - r.top) / r.height;
-                    if (cursorGlow) {
-                        cursorGlow.classList.add('on');
-                        cursorGlow.style.left = e.clientX - r.left + 'px';
-                        cursorGlow.style.top = e.clientY - r.top + 'px';
-                    }
-                });
-                hero.addEventListener('mouseleave', () => { if (cursorGlow) cursorGlow.classList.remove('on'); });
-            }
-
-            function parallaxLoop() {
-                gx += (pmx - gx) * 0.06;
-                gy += (pmy - gy) * 0.06;
-                const dx = (gx - 0.5) * 18;
-                const dy = (gy - 0.5) * 14;
-                if (heroContent) heroContent.style.transform = `translate(${dx * 0.4}px, ${dy * 0.4}px)`;
-                if (dishShowcase) dishShowcase.style.transform = `translate(${-dx * 0.8}px, ${-dy * 0.8}px)`;
-                if (slideCounter) slideCounter.style.transform = `translate(${-dx * 0.8}px, ${-dy * 0.8}px)`;
-                requestAnimationFrame(parallaxLoop);
-            }
-            requestAnimationFrame(parallaxLoop);
-
-            /* ---------- Magnetic buttons ---------- */
-            document.querySelectorAll('.magnet').forEach(btn => {
-                btn.addEventListener('mousemove', e => {
-                    const r = btn.getBoundingClientRect();
-                    const dx = (e.clientX - r.left - r.width / 2) / r.width;
-                    const dy = (e.clientY - r.top - r.height / 2) / r.height;
-                    btn.style.transform = `translate(${dx * 14}px, ${dy * 10 - 3}px)`;
-                });
-                btn.addEventListener('mouseleave', () => btn.style.transform = '');
-            });
-
-            /* ---------- Slide engine ---------- */
-            function renderProgress() {
-                if (!countFill || !cuisines.length) return;
-                countFill.style.transition = 'none';
-                countFill.style.width = '0%';
-                cuisines[active].classList.remove('active');
-                void countFill.offsetWidth;
-                cuisines[active].classList.add('active');
-                requestAnimationFrame(() => {
-                    countFill.style.transition = `width ${DURATION / 1000}s linear`;
-                    countFill.style.width = '100%';
-                });
-            }
-
-            function goTo(index, restart = true) {
-                slides[active].classList.remove('active');
-                if (cuisines.length) cuisines[active].classList.remove('active');
-
-                active = index;
-                const slide = slides[active];
-
-                slides[active].classList.add('active');
-                slides[active].style.animation = 'none';
-                void slides[active].offsetWidth;
-                slides[active].style.animation = '';
-
-                // cinematic wipe
-                if (slideWipe) {
-                    slideWipe.classList.remove('run');
-                    void slideWipe.offsetWidth;
-                    slideWipe.classList.add('run');
-                }
-
-                // crossfade dish image
-                if (dishImgMask) {
-                    const oldImg = dishImgMask.querySelector('img');
-                    const newImg = document.createElement('img');
-                    newImg.src = slide.dataset.dishImg;
-                    newImg.alt = 'Signature dish';
-                    newImg.className = 'incoming';
-                    if (oldImg) oldImg.classList.add('outgoing');
-                    dishImgMask.appendChild(newImg);
-                    setTimeout(() => { if (oldImg) oldImg.remove(); }, 750);
-                }
-
-                // swap dish name
-                if (dishName) {
-                    dishName.classList.add('swap');
-                    setTimeout(() => {
-                        dishName.innerHTML = slide.dataset.dishName;
-                        dishName.classList.remove('swap');
-                    }, 220);
-                }
-
-                // bump counter
-                if (slideCurrent) {
-                    slideCurrent.classList.add('bump');
-                    setTimeout(() => slideCurrent.classList.remove('bump'), 400);
-                    slideCurrent.textContent = String(active + 1).padStart(2, '0');
-                }
-
-                renderProgress();
-
-                if (restart) {
-                    clearInterval(heroTimer);
-                    heroTimer = setInterval(() => goTo((active + 1) % slides.length), DURATION);
-                }
-            }
-
-            cuisines.forEach(c => {
-                c.addEventListener('click', () => goTo(parseInt(c.dataset.slide, 10)));
-            });
-
-            if (slides.length) {
-                renderProgress();
-                heroTimer = setInterval(() => goTo((active + 1) % slides.length), DURATION);
-            }
-        })();
-
-        // ── MENU TABS ────────────────────────────────
-        function switchTab(id, btn) {
-            document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
-            document.querySelectorAll('.menu-section').forEach(s => s.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById('tab-' + id).classList.add('active');
-        }
-
-        // ── MENU CATEGORY SWITCH ─────────────────────
-        window.switchCat = function (id, el) {
-    // Active section hide
-    const current = document.querySelector('.menu-section.active');
-    if (current) current.classList.remove('active');
-
-    // Active sidebar item
-    document.querySelectorAll('.cat-item')
-        .forEach(c => c.classList.remove('active'));
-
-    // New section show — requestAnimationFrame இல்லாம direct
-    const next = document.getElementById('ms-' + id);
-    if (next) next.classList.add('active');
-
-    if (el) el.classList.add('active');
-}
-
-        // ── SMOOTH NAV ───────────────────────────────
-        document.querySelectorAll('a[href^="#"]').forEach(a => {
-            a.addEventListener('click', e => {
-                const target = document.querySelector(a.getAttribute('href'));
-                if (target) {
-                    e.preventDefault();
-                    target.scrollIntoView({ behavior: 'smooth' });
-                    // close mobile nav
-                    const nav = document.getElementById('navMenu');
-                    if (nav.classList.contains('show')) {
-                        nav.classList.remove('show');
-                    }
-                }
-            });
-        });
-
-        // ── COUNTER ANIMATION ────────────────────────
-        function animateCounters() {
-            document.querySelectorAll('.stat-num').forEach(el => {
-                const target = parseInt(el.textContent);
-                if (isNaN(target)) return;
-                const suffix = el.querySelector('span') ? el.querySelector('span').outerHTML : '';
-                let count = 0;
-                const step = Math.ceil(target / 50);
-                const interval = setInterval(() => {
-                    count = Math.min(count + step, target);
-                    el.innerHTML = count + suffix;
-                    if (count >= target) clearInterval(interval);
-                }, 30);
-            });
-        }
-        const counterSection = document.querySelector('.stat-box');
-        const counterObserver = new IntersectionObserver(entries => {
-            if (entries[0].isIntersecting) { animateCounters(); counterObserver.disconnect(); }
-        }, { threshold: 0.5 });
-        if (counterSection) counterObserver.observe(counterSection);
-    </script>
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js";
@@ -1074,5 +846,4 @@
     </script>
 
 </body>
-
 </html>
